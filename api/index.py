@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import cross_origin
 
-from pdf_utils import pdf_to_text
-from preprocess import preprocess
+from api.pdf_utils import pdf_to_text
+from api.preprocess import preprocess
 import pickle
 app = Flask(__name__)
 
