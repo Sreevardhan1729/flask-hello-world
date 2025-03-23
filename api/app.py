@@ -3,12 +3,14 @@ from flask_cors import cross_origin
 from model import load_model
 from pdf_utils import pdf_to_text
 from preprocess import preprocess
+import pickle
 app = Flask(__name__)
 
 
 
-model_path = "./model"
-model = load_model(model_path=model_path)
+
+with open("./converted_model.pkl", "rb") as f:
+    model = pickle.load(f)
 
 @app.route('/compare', methods=['POST'])
 @cross_origin()
