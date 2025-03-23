@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 
-with open("api/converted_model.pkl", "rb") as f:
+with open("../converted_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 @app.route('/compare', methods=['POST'])
