@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import cross_origin
-import spacy
+
 from pdf_utils import pdf_to_text
 from preprocess import preprocess
 import pickle
