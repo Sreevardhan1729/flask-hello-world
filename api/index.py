@@ -7,8 +7,6 @@ import pickle
 app = Flask(__name__)
 
 
-
-
 with open("api/converted_model.pkl", "rb") as f:
     model = pickle.load(f)
 
